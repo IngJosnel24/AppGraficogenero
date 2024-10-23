@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
 import GraficoSalarios from './src/GraficoSalarios';
+import GraficoBezier from './src/GraficoBezier';
 import GraficoGeneros from './src/GraficoGenero';
 import Formulario from './src/Formulario';
 import { collection, getDocs, query } from 'firebase/firestore';
@@ -133,6 +134,7 @@ export default function App() {
       <ScrollView contentContainerStyle={styles.scrollView}>
         <Formulario setBandera={setBandera}/>
         <GraficoSalarios dataSalarios={dataSalarios}/>
+        <GraficoBezier dataSalarios={dataSalarios}/>
         <GraficoGeneros dataGeneros={dataGeneros}/>
         <GraficoReporteEnfermedades dataReporteEnfermedades={dataReporteEnfermedades}/>
       </ScrollView>
